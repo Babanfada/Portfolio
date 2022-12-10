@@ -1,0 +1,7 @@
+.icon{
+    display: none;
+}
+
+.icons:hover{
+    display: block;
+}
