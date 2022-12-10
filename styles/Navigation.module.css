@@ -1,7 +1,21 @@
-.icon{
-    display: none;
+/* .icon {
+  display: none;
 }
 
-.icons:hover{
+.icons:hover {
+  display: block;
+}
+
+.hover:hover {
+  background-color: #1d9bf0;
+} */
+/* .hover1:hover {
+  background-color: #1d9bf0;
+  width: 150px;
+} */
+
+.icon:hover {
     display: block;
+  color: blue;
+  
 }
