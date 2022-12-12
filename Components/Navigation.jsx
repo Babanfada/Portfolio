@@ -1,25 +1,18 @@
-import HomeIcon from "@mui/icons-material/Home";
-import styles from "../styles/Navigation.module.css";
 import { Avatar } from "@mui/material";
-import { dataContext } from "./Layout";
-import { useContext } from "react";
 
-const Navigation = () => {
-  const { icon } = useContext(dataContext);
-  const [Menu, Home, , , , , contact] = icon;
-
+const Navigation = ({ icon }) => {
   return (
     <div>
       <Avatar
-        sx={{ width: "60px", height: "60px" }}
+        variant="square"
+        sx={{ width: "50px", height: "50px" }}
         style={{
-          padding: "10px",
+          padding: "7px",
           cursor: "pointer",
           backgroundColor: "rgba(255, 255, 255, 0.109)",
         }}
       >
-        {/* <HomeIcon /> */}
-        {contact.icon}
+        {icon.icon}
       </Avatar>
     </div>
   );
