@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -10,19 +18,22 @@
 * {
   margin: 0;
 }
-html,
+/* html,
 body {
   height: auto;
   background-color: black;
-  
-}
+} */
 body {
   position: relative;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: black;
+  /* background-color: black; */
   font-family: "Roboto Slab", serif;
   color: white;
+  /* background-color: black; */
+  background-image: url("../public/images/fullscreendark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 img,
@@ -54,3 +65,13 @@ li {
 a:active {
   text-decoration: none;
 }
+
+/* @media (max-width: 540px) {
+  body {
+    background-color: black;
+    background-image: url("../public/images/fullscreendark.jpg");
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+} */

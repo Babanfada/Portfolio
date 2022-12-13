@@ -16,10 +16,12 @@ import { NavLink } from "react-router-dom";
 import Link from "next/link";
 import ActiveLink from "./ActiveLink";
 import { motion } from "framer-motion";
+import image from "../public/images/fullscreendark.jpg";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   const [isNav, setisNav] = useState(true);
-  const [isdarkmode, setisdarkmode] = useLocalStorage("darkmodestatus", true);
+  const [isdarkmode, setisdarkmode] = useLocalStorage("darkmodestatus", false);
   const [badge, setbadge] = useState(false);
 
   const handleopenMenu = () => {
@@ -96,18 +98,35 @@ const Layout = ({ children }) => {
 
   const [Home, person, business, contact, light, dark, Menu, close] = icons;
   const listedIcons = icons.slice(0, 4);
+  
 
   const activeStyle = {
-    textDecoration: "underline",
+    backgroundColor: `linear-gradient(
+    to bottom,
+    #f4f4f4,
+    #f3eff3,
+    #f6e9ec,
+    #f8e4e1,
+    #f4e1d3,
+    #f6e1c6,
+    #f2e4ba,
+    #e7e8b1,
+    #ebee9f,
+    #eef38d,
+    #f0f97a,
+    #f2ff64
+  )`,
   };
 
   return (
-    <dataContext.Provider value={{ icons, badge, setbadge }}>
+    <dataContext.Provider value={{ icons, badge, setbadge, listedIcons }}>
       <div
         style={{
+          position: "relative",
           border: "1px solid blue",
           height: "100vh",
-          backgroundColor: `${isdarkmode ? "black" : "grey"}`,
+          overflow: "hidden",
+          backgroundColor: `${isdarkmode ? "black" : "transparent"}`,
         }}
       >
         <div
@@ -174,8 +193,9 @@ const Layout = ({ children }) => {
         </div>
 
         <div>{children}</div>
-        <div>footer</div>
+        {/* <div>footer</div> */}
       </div>
+      <Footer />
     </dataContext.Provider>
   );
 };

@@ -1,5 +1,12 @@
 .container {
   padding: 0 2rem;
+  border: 1px solid red;
+  display: flex;
+  height: 90vh;
+  /* background-image: url("../public/images/fullscreendark.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: "#222222"; */
 }
 
 .main {
@@ -19,6 +26,7 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  /* color: hsl(0, 0%, 92%); */
 }
 
 .footer a {
