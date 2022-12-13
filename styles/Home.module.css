@@ -1,8 +1,8 @@
 .container {
   padding: 0 2rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
-  height: 90vh;
+  height: auto;
   /* background-image: url("../public/images/fullscreendark.jpg");
   background-size: contain;
   background-repeat: no-repeat;

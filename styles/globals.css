@@ -34,6 +34,7 @@ body {
   background-image: url("../public/images/fullscreendark.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 img,

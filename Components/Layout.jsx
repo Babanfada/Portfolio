@@ -18,6 +18,7 @@ import ActiveLink from "./ActiveLink";
 import { motion } from "framer-motion";
 import image from "../public/images/fullscreendark.jpg";
 import Footer from "./Footer";
+import styles from "../styles/footer.module.css"
 
 const Layout = ({ children }) => {
   const [isNav, setisNav] = useState(true);
@@ -98,7 +99,6 @@ const Layout = ({ children }) => {
 
   const [Home, person, business, contact, light, dark, Menu, close] = icons;
   const listedIcons = icons.slice(0, 4);
-  
 
   const activeStyle = {
     backgroundColor: `linear-gradient(
@@ -123,7 +123,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           position: "relative",
-          border: "1px solid blue",
+          // border: "1px solid blue",
           height: "100vh",
           overflow: "hidden",
           backgroundColor: `${isdarkmode ? "black" : "transparent"}`,
@@ -138,7 +138,7 @@ const Layout = ({ children }) => {
             height: "100px",
           }}
         >
-          <div>
+          <div className={styles.toggle}>
             {isNav ? (
               <div onClick={handleopenMenu}>
                 <Navigation icon={Menu} />
@@ -193,9 +193,13 @@ const Layout = ({ children }) => {
         </div>
 
         <div>{children}</div>
-        {/* <div>footer</div> */}
+        <div
+          style={{ position: "absolute", bottom: "0", width:"100%" }}
+          className={styles.footer}
+        >
+          <Footer />
+        </div>
       </div>
-      <Footer />
     </dataContext.Provider>
   );
 };

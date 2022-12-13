@@ -5,7 +5,7 @@
 .firstbox {
   flex-basis: 50%;
   flex-shrink: 10;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .secondbox {
@@ -14,19 +14,25 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 15vh 5vw 0 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .secondbox h1 {
   color: #ffb400;
   /* color: #b6a58a; */
-  font-size: 3vw;
+  font-size: 40px;
   font-family: "Rubik Spray Paint", cursive;
+}
+.secondbox h1 span {
+  color: #4732a8;
+  /* color: #b6a58a;
+  font-size: 40px;
+  font-family: "Rubik Spray Paint", cursive; */
 }
 .secondbox h2 {
   color: #ffb400;
   font-family: "Rubik Spray Paint", cursive;
-  font-size: 3vw;
+  font-size: 30px;
   font-weight: bold;
 }
 .secondbox h2 + p {
@@ -39,6 +45,7 @@
 }
 .stackbutton {
   width: 15vw;
+  font-family: "Lobster", cursive;
 }
 .stack {
   display: flex;
@@ -54,7 +61,7 @@
   .secondbox {
     flex-basis: 100%;
     align-items: center;
-    padding-top: 15vh;
+    padding-top: 0vh;
     /* justify-content: center; */
   }
   .secondbox h2 + p {

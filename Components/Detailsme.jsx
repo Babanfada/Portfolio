@@ -8,6 +8,8 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import { MdOutlineEventNote } from "react-icons/md";
 import { styled } from "@mui/material/styles";
 import { yellow } from "@mui/material/colors";
+import Link from "next/link";
+// import CV from "../public/images/document.pdf";
 
 const BootstrapButton = styled(Button)({
   boxShadow: "none",
@@ -61,7 +63,7 @@ const Detailsme = () => {
       <div className={styles.firstbox}></div>
 
       <div className={styles.secondbox}>
-        <h1>Hi !!</h1>
+        <h1>Hi <span>!!</span> </h1>
         <h2>
           <Typical
             loop={Infinity}
@@ -94,23 +96,27 @@ const Detailsme = () => {
         </p>
 
         <Stack className={styles.stack} direction="row" spacing={0}>
-          <BootstrapButton
-            className={styles.stackbutton}
-            style={{ borderRadius: "20px", color: "white" }}
-            size="large"
-            variant="outlined"
-            startIcon={<MdOutlineEventNote />}
-          >
-            CV
-          </BootstrapButton>
-          <BootstrapButton
-            className={styles.stackbutton}
-            style={{ borderRadius: "20px", color: "white" }}
-            variant="outlined"
-            startIcon={<BusinessCenterIcon />}
-          >
-            Portfolio
-          </BootstrapButton>
+          <a className={styles.stackbutton} title="Download CV">
+            <BootstrapButton
+              className={styles.stackbutton}
+              style={{ borderRadius: "20px", color: "white" }}
+              size="large"
+              variant="outlined"
+              startIcon={<MdOutlineEventNote />}
+            >
+              CV
+            </BootstrapButton>
+          </a>
+          <Link className={styles.stackbutton} href={"/portfolio"}>
+            <BootstrapButton
+              className={styles.stackbutton}
+              style={{ borderRadius: "20px", color: "white" }}
+              variant="outlined"
+              startIcon={<BusinessCenterIcon />}
+            >
+              Portfolio
+            </BootstrapButton>
+          </Link>
         </Stack>
       </div>
     </div>
