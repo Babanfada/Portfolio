@@ -6,6 +6,9 @@ function ActiveLink({ children, href }) {
     marginRight: 0,
     textDecoration: "none",
     color: router.asPath === href ? "pink" : "white",
+    backgroundColor:
+      router.asPath === href ? "rgba(255, 255, 255, 0.309)" : "transparent",
+    borderRadius: "50%",
   };
 
   const handleClick = (e) => {

@@ -3,6 +3,7 @@ import { useContext } from "react";
 import styles from "../styles/footer.module.css";
 import { Avatar } from "@mui/material";
 import ActiveLink from "./ActiveLink";
+import { css } from "glamor";
 //import styles from "../styles/detailsme.module.css";
 const Footer = () => {
   const { listedIcons } = useContext(dataContext);
@@ -15,17 +16,9 @@ const Footer = () => {
             style={{ color: "white", textDecoration: "none" }}
             href={listedIcon.link}
           >
-            <Avatar
-              variant="round"
-              sx={{ width: "50px", height: "50px" }}
-              style={{
-                padding: "7px",
-                cursor: "pointer",
-                backgroundColor: "rgba(255, 255, 255, 0.109)",
-              }}
-            >
+            <div className={styles.avatar}>
               <div title={listedIcon.name}>{listedIcon.icon}</div>
-            </Avatar>
+            </div>
           </ActiveLink>
         );
       })}

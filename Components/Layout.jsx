@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
       link: "/about",
     },
     {
-      icon: <BusinessCenterIcon sx={{ fonstSize: "50", color: "purple" }} />,
+      icon: <BusinessCenterIcon sx={{ fonstSize: "50", color: purple[300] }} />,
       name: "Portfolio",
       color: "#9c27b0",
       link: "/portfolio",
