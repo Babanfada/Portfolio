@@ -1,24 +1,14 @@
 import Navigation from "./Navigation";
-import MenuIcon from "@mui/icons-material/Menu";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import PersonIcon from "@mui/icons-material/Person";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import HomeIcon from "@mui/icons-material/Home";
-import CloseIcon from "@mui/icons-material/Close";
 import { createContext, useState } from "react";
 import Navigations from "./Navigations";
 export const dataContext = createContext("");
 import useLocalStorage from "./LocalStorage";
-import { green, yellow, red, grey, purple, blue } from "@mui/material/colors";
-import { NavLink } from "react-router-dom";
-import Link from "next/link";
 import ActiveLink from "./ActiveLink";
 import { motion } from "framer-motion";
-import image from "../public/images/fullscreendark.jpg";
 import Footer from "./Footer";
-import styles from "../styles/footer.module.css"
+import styles from "../styles/footer.module.css";
+import { icons } from "./Data";
+// import video from "../public/images/video.mp4"
 
 const Layout = ({ children }) => {
   const [isNav, setisNav] = useState(true);
@@ -35,169 +25,113 @@ const Layout = ({ children }) => {
     setisdarkmode((prev) => !prev);
   };
 
-  // const handleBadge = (e) => {
-  //   setbadge((prev) => !prev);
-  // };
-  const icons = [
-    {
-      icon: (
-        <HomeIcon
-          color="secondary"
-          sx={{ fonstSize: "50", color: yellow[500] }}
-        />
-      ),
-      name: "Home",
-      color: "#ffeb3b",
-      // badge: handleBadge,
-      link: "/",
-    },
-
-    {
-      icon: (
-        <PersonIcon
-          color="success"
-          sx={{ fonstSize: "50", color: blue[500] }}
-        />
-      ),
-      name: "Person",
-      color: "#2196f3",
-      link: "/about",
-    },
-    {
-      icon: <BusinessCenterIcon sx={{ fonstSize: "50", color: purple[300] }} />,
-      name: "Portfolio",
-      color: "#9c27b0",
-      link: "/portfolio",
-    },
-    {
-      icon: <ContactPhoneIcon sx={{ fonstSize: "50", color: green[500] }} />,
-      name: "Contact",
-      style1: "0px",
-      color: "#4caf50",
-      link: "/contact",
-    },
-    {
-      icon: <LightModeIcon sx={{ fonstSize: "50", color: yellow[500] }} />,
-      name: "Light",
-    },
-    {
-      icon: <DarkModeIcon sx={{ fonstSize: "50", color: blue[500] }} />,
-      name: "Dark",
-    },
-    {
-      icon: <MenuIcon sx={{ fonstSize: "50", color: yellow[500] }} />,
-      name: "Menu",
-      style1: "0px",
-    },
-    {
-      icon: <CloseIcon sx={{ fonstSize: "50", color: red[900] }} />,
-      name: "",
-      style: "0px",
-      // toggle: handlecloseMenu,
-    },
-  ];
-
   const [Home, person, business, contact, light, dark, Menu, close] = icons;
   const listedIcons = icons.slice(0, 4);
 
-  const activeStyle = {
-    backgroundColor: `linear-gradient(
-    to bottom,
-    #f4f4f4,
-    #f3eff3,
-    #f6e9ec,
-    #f8e4e1,
-    #f4e1d3,
-    #f6e1c6,
-    #f2e4ba,
-    #e7e8b1,
-    #ebee9f,
-    #eef38d,
-    #f0f97a,
-    #f2ff64
-  )`,
-  };
-
   return (
     <dataContext.Provider value={{ icons, badge, setbadge, listedIcons }}>
-      <div
-        style={{
-          position: "relative",
-          // border: "1px solid blue",
-          height: "100vh",
-          overflow: "hidden",
-          backgroundColor: `${isdarkmode ? "black" : "transparent"}`,
-        }}
-      >
+      <div style={{ position: "relative" }}>
+        <video
+          style={{
+            //  border: "5px solid red",
+            width: "100%",
+            height: "100%",
+            position: "absolute",
+            // backgroundColor:"red"
+          }}
+          src={""}
+        ></video>
+
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            // border: "1px solid red",
-            padding: "2vw 2vw 1vw 2vw",
-            height: "100px",
+            position: "relative",
+            // border: "5px solid blue",
+            minHeight: "100vh",
+            // overflow: "hidden",
+            zIndex: "0",
+            backgroundColor: `${isdarkmode ? "black" : "transparent"}`,
           }}
         >
-          <div className={styles.toggle}>
-            {isNav ? (
-              <div onClick={handleopenMenu}>
-                <Navigation icon={Menu} />
-              </div>
-            ) : (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0vh",
-                }}
-              >
-                <div onClick={handlecloseMenu}>
-                  <Navigation icon={close} />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              // border: "1px solid red",
+              padding: "2vw 2vw 1vw 2vw",
+              height: "100px",
+              position: "fixed",
+              // position: "sticky",
+              // top: "0vh",
+              width: "100%",
+            }}
+          >
+            <div className={styles.toggle}>
+              {isNav ? (
+                <div onClick={handleopenMenu}>
+                  <Navigation icon={Menu} />
                 </div>
-                <div>
-                  {listedIcons.map((icon, index) => {
-                    return (
-                      <ActiveLink
-                        style={{ color: "white", textDecoration: "none" }}
-                        key={index}
-                        href={icon.link}
-                      >
-                        <motion.div
-                          initial={{
-                            opacity: 0,
-                          }}
-                          animate={{
-                            opacity: 1,
-                            transition: { duration: 1, height: "100%" },
-                          }}
-                          exit={{ opacity: 1 }}
-                          onClick={handlecloseMenu}
+              ) : (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0vh",
+                  }}
+                >
+                  <div onClick={handlecloseMenu}>
+                    <Navigation icon={close} />
+                  </div>
+                  <div>
+                    {listedIcons.map((icon, index) => {
+                      return (
+                        <ActiveLink
+                          style={{ color: "white", textDecoration: "none" }}
+                          key={index}
+                          href={icon.link}
                         >
-                          <Navigations icon={icon} />
-                        </motion.div>
-                      </ActiveLink>
-                    );
-                  })}
+                          <motion.div
+                            initial={{
+                              opacity: 0,
+                            }}
+                            animate={{
+                              opacity: 1,
+                              transition: { duration: 1, height: "100%" },
+                            }}
+                            exit={{ opacity: 1 }}
+                            onClick={handlecloseMenu}
+                          >
+                            <Navigations icon={icon} />
+                          </motion.div>
+                        </ActiveLink>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
+
+            <div onClick={handledarkmode}>
+              {isdarkmode ? (
+                <Navigation icon={light} />
+              ) : (
+                <Navigation icon={dark} />
+              )}
+            </div>
           </div>
 
-          <div onClick={handledarkmode}>
-            {isdarkmode ? (
-              <Navigation icon={light} />
-            ) : (
-              <Navigation icon={dark} />
-            )}
+          <div>{children}</div>
+          <div
+            style={{
+              // position: "sticky",
+              position:"fixed",
+              top: "85.5vh",
+              width: "100%",
+              // border: "3px solid red",
+            }}
+            className={styles.footer}
+          >
+            <Footer />
           </div>
-        </div>
-
-        <div>{children}</div>
-        <div
-          style={{ position: "absolute", bottom: "0", width:"100%" }}
-          className={styles.footer}
-        >
-          <Footer />
         </div>
       </div>
     </dataContext.Provider>

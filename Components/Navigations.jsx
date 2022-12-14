@@ -23,6 +23,7 @@ const Navigations = ({ icon }) => {
         // border: "1px solid red",
         height: "50px",
         cursor: "pointer",
+        zIndex: "3",
       }}
       className={css({
         ":hover": { color: icon.color },
@@ -60,7 +61,7 @@ const Navigations = ({ icon }) => {
         >
           <div>
             {/* <Badge badgeContent={`${badge ? 1 : 0}`} color="secondary"> */}
-              {icon.icon}
+            {icon.icon}
             {/* </Badge> */}
           </div>
         </Avatar>

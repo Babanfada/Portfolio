@@ -16,12 +16,18 @@
   height: 50px;
   border-radius: 50%;
 }
-.avatar:hover{
-     background-color: rgba(255, 255, 255, 0.309);
+.avatar:hover {
+  background-color: rgba(255, 255, 255, 0.309);
 }
 /* .avatar:active{
      background-color: yellow;
 } */
+.toggle {
+  /* display: none; */
+  z-index: 4;
+  /* position: fixed; */
+  /* visibility: hidden; */
+}
 @media (min-width: 940px) {
   .footer {
     display: none;
@@ -30,6 +36,7 @@
 @media (max-width: 940px) {
   .toggle {
     display: none;
+    /* z-index: 4; */
     /* visibility: hidden; */
   }
 }
