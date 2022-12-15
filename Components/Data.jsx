@@ -8,6 +8,11 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import CloseIcon from "@mui/icons-material/Close";
 import { green, yellow, red, grey, purple, blue } from "@mui/material/colors";
 
+import react from "../public/images/react.png";
+import next from "../public/images/next.png";
+import firebase from "../public/images/firebase.png";
+import git from "../public/images/git.png";
+import github from "../public/images/github.png";
 export const headData = [
   {
     title: "Tolani_Home",
@@ -16,8 +21,8 @@ export const headData = [
     href: <HomeIcon />,
   },
   {
-    title: "Tolani_About",
-    name: "About",
+    title: "Tolani_Stack",
+    name: "Stacks",
     content: "About me",
     href: <PersonIcon />,
   },
@@ -52,9 +57,9 @@ export const icons = [
     icon: (
       <PersonIcon color="success" sx={{ fonstSize: "50", color: blue[500] }} />
     ),
-    name: "About",
+    name: "Stack",
     color: "#2196f3",
-    link: "/about",
+    link: "/stack",
   },
   {
     icon: <BusinessCenterIcon sx={{ fonstSize: "50", color: purple[300] }} />,
@@ -92,8 +97,8 @@ export const icons = [
 export const pageHeaderData = [
   {
     inner: "Resume",
-    content: "About",
-    span: "me",
+    content: "My",
+    span: "stack",
   },
   {
     inner: "works",
@@ -104,5 +109,28 @@ export const pageHeaderData = [
     inner: "contact",
     content: "get in",
     span: "touch",
+  },
+];
+
+export const skills = [
+  {
+    image: react,
+    name: "React",
+  },
+  {
+    image: next,
+    name: "Next",
+  },
+  {
+    image: firebase,
+    name: "Firebase",
+  },
+  {
+    image: git,
+    name: "Git",
+  },
+  {
+    image: github,
+    name: "Github",
   },
 ];
