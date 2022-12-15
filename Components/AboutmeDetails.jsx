@@ -3,12 +3,13 @@ import profile from "../public/images/fullscreendark.jpg";
 import Skills from "./Skills";
 import { skills } from "./Data";
 import styles from "../styles/aboutmedetails.module.css";
+import { motion } from "framer-motion";
 const AboutmeDetails = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.first}>
+      <motion.div whileHover={{ scale: 0.95 }} className={styles.first}>
         <Image className={styles.image} src={profile} alt={"draft"} />
-      </div>
+      </motion.div>
 
       <div className={styles.second}>
         {skills.map((skill, index) => {

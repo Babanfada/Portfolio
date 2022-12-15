@@ -7,12 +7,16 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import CloseIcon from "@mui/icons-material/Close";
 import { green, yellow, red, grey, purple, blue } from "@mui/material/colors";
-
 import react from "../public/images/react.png";
 import next from "../public/images/next.png";
 import firebase from "../public/images/firebase.png";
 import git from "../public/images/git.png";
 import github from "../public/images/github.png";
+
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export const headData = [
   {
     title: "Tolani_Home",
@@ -132,5 +136,26 @@ export const skills = [
   {
     image: github,
     name: "Github",
+  },
+];
+
+export const contactData = [
+  {
+    icon: <LocalPhoneIcon sx={{ fonstSize: "50", color: yellow[500] }} />,
+    url: "+2347038626576",
+    color: "#ffeb3b",
+    link: "/",
+  },
+  {
+    icon: <EmailIcon sx={{ fonstSize: "50", color: green[500] }} />,
+    url: "ibn.ibrahim1992@gmail.com",
+    color: "#4caf50",
+    link: "/",
+  },
+  {
+    icon: <LinkedInIcon sx={{ fonstSize: "50", color: blue[500] }} />,
+    url: "@babanfada",
+    color: "#2196f3",
+    link: "/",
   },
 ];

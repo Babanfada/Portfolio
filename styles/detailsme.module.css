@@ -61,7 +61,7 @@
   .secondbox {
     flex-basis: 100%;
     align-items: center;
-    padding-top: 0vh;
+    padding-top: 10vh;
     /* justify-content: center; */
   }
   .secondbox h2 + p {

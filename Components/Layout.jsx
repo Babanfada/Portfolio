@@ -67,9 +67,12 @@ const Layout = ({ children }) => {
           >
             <div className={styles.toggle}>
               {isNav ? (
-                <div onClick={handleopenMenu}>
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  onClick={handleopenMenu}
+                >
                   <Navigation icon={Menu} />
-                </div>
+                </motion.div>
               ) : (
                 <div
                   style={{
@@ -110,20 +113,20 @@ const Layout = ({ children }) => {
               )}
             </div>
 
-            <div onClick={handledarkmode}>
+            <motion.div whileHover={{ scale: 0.9 }} onClick={handledarkmode}>
               {isdarkmode ? (
                 <Navigation icon={light} />
               ) : (
                 <Navigation icon={dark} />
               )}
-            </div>
+            </motion.div>
           </div>
 
           <div>{children}</div>
           <div
             style={{
               // position: "sticky",
-              position:"fixed",
+              position: "fixed",
               top: "90vh",
               width: "100%",
               // border: "3px solid red",

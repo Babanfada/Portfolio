@@ -10,7 +10,7 @@ import { styled } from "@mui/material/styles";
 import { yellow } from "@mui/material/colors";
 import Link from "next/link";
 // import CV from "../public/images/document.pdf";
-
+const gradient = `radial-gradient(circle, rgba(184,185,22,0.5) 0%, rgba(184,172,35,0.23) 100%)`;
 const BootstrapButton = styled(Button)({
   boxShadow: "none",
   textTransform: "none",
@@ -33,7 +33,8 @@ const BootstrapButton = styled(Button)({
     '"Segoe UI Symbol"',
   ].join(","),
   "&:hover": {
-    backgroundColor: "#ffb400",
+    background: gradient,
+    // backgroundColor: "#ffb400",
     borderColor: "#ffb400",
     boxShadow: "none",
     color: "black",
@@ -63,7 +64,9 @@ const Detailsme = () => {
       <div className={styles.firstbox}></div>
 
       <div className={styles.secondbox}>
-        <h1>Hi <span>!!</span> </h1>
+        <h1>
+          Hi <span>!!</span>{" "}
+        </h1>
         <h2>
           <Typical
             loop={Infinity}
