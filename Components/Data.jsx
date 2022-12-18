@@ -147,7 +147,7 @@ export const contactData = [
     link: "/",
   },
   {
-    icon: <EmailIcon sx={{ fonstSize: "50", color: green[500] }} />,
+    icon: <EmailIcon sx={{ fonstSize: "50px", color: green[500] }} />,
     url: "ibn.ibrahim1992@gmail.com",
     color: "#4caf50",
     link: "/",
