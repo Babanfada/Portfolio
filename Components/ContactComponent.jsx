@@ -1,7 +1,7 @@
-
 import styles from "../styles/contact.module.css";
 import ContactInput from "../Components/ContactInput";
 import { contactData } from "./Data";
+import Link from "next/link";
 const ContactComponent = () => {
   return (
     <div className={styles.wrapper}>
@@ -9,9 +9,15 @@ const ContactComponent = () => {
         {contactData.map((contact, index) => {
           return (
             <div key={index} className={styles.item}>
-              <div>{contact.icon}</div>
-
-              <div style={{ color: contact.color }}>{contact.url}</div>
+              <a
+                className={styles.item}
+                href={contact.link}
+                rel="noreferrer"
+                target={"_blank"}
+              >
+                <div>{contact.icon}</div>
+                <div style={{ color: contact.color }}>{contact.url}</div>
+              </a>
             </div>
           );
         })}
@@ -21,6 +27,6 @@ const ContactComponent = () => {
       </div>
     </div>
   );
-}
+};
 
-export default ContactComponent
+export default ContactComponent;

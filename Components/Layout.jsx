@@ -1,4 +1,5 @@
 import Navigation from "./Navigation";
+import * as React from "react";
 import { createContext, useState } from "react";
 import Navigations from "./Navigations";
 export const dataContext = createContext("");
@@ -11,6 +12,28 @@ import { icons } from "./Data";
 // import video from "../public/images/video.mp4"
 
 const Layout = ({ children }) => {
+  const [open, setOpen] = React.useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+
+  const [openF, setOpenF] = React.useState(false);
+  const handleClickF = () => {
+    setOpenF(true);
+  };
+  const handleCloseF = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenF(false);
+  };
+
   const [isNav, setisNav] = useState(true);
   const [isdarkmode, setisdarkmode] = useLocalStorage("darkmodestatus", false);
   const [badge, setbadge] = useState(false);
@@ -29,28 +52,53 @@ const Layout = ({ children }) => {
   const listedIcons = icons.slice(0, 4);
 
   return (
-    <dataContext.Provider value={{ icons, badge, setbadge, listedIcons }}>
-      <div style={{ position: "relative" }}>
-        <video
+    <dataContext.Provider
+      value={{
+        icons,
+        badge,
+        setbadge,
+        listedIcons,
+        open,
+        setOpen,
+        handleClick,
+        handleClose,
+        openF,
+        setOpenF,
+        handleClickF,
+        handleCloseF,
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          // height: "140vh",
+          // border: "4px solid blue",
+          // width: "100vw",
+        }}
+        className={styles.height}
+      >
+        {/* <video
           style={{
-            //  border: "5px solid red",
+             border: "5px solid red",
             width: "100%",
             height: "100%",
             position: "absolute",
             // backgroundColor:"red"
           }}
           src={""}
-        ></video>
+        ></video> */}
 
         <div
           style={{
             position: "relative",
-            // border: "5px solid blue",
+            //  border: "1px solid yellow", //check
             minHeight: "100vh",
+            width:"100vw",
             // overflow: "hidden",
             zIndex: "0",
             backgroundColor: `${isdarkmode ? "black" : "transparent"}`,
           }}
+          className={styles.height}
         >
           <div
             style={{
@@ -127,7 +175,8 @@ const Layout = ({ children }) => {
             style={{
               // position: "sticky",
               position: "fixed",
-              top: "90vh",
+              // top: "90vh",
+              bottom: "0",
               width: "100%",
               // border: "3px solid red",
             }}

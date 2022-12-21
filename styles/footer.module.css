@@ -3,13 +3,12 @@
   /* border: 1px solid red; */
   padding: 2vw;
   justify-content: space-evenly;
-  background-color: rgba(7, 0, 0, 0.897);;
+  background-color: rgba(7, 0, 0, 0.897);
 }
 .avatar {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 7px;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.109);
@@ -34,10 +33,15 @@
     display: none;
   }
 }
+
 @media (max-width: 940px) {
   .toggle {
     display: none;
-    /* z-index: 4; */
-    /* visibility: hidden; */
   }
+  .height {
+    height: 132vh;
+  }
+  /* .foot{
+
+  } */
 }

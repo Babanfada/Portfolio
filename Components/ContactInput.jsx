@@ -2,54 +2,110 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { alpha, styled } from "@mui/material/styles";
 import styles from "../styles/contact.module.css";
+import styless from "../styles/detailsme.module.css";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+import { yellow } from "@mui/material/colors";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import AlertSnackBar from "./AlertSnackBar";
+import { dataContext } from "./Layout";
+import * as React from "react";
+import AlertSnackBarF from "./AlertSnackBarF";
 
-// const CssTextField = styled(TextField)({
-//   "& label.Mui-focused": {
-//     color: "white",
-//   },
-//   "& .MuiInput-underline:after": {
-//     borderBottomColor: "green",
-//   },
-//   "& .MuiOutlinedInput-root": {
-//     "& fieldset": {
-//       borderColor: "transparent",
-//       backgroundColor: "rgb(34, 34, 34)",
-//       borderRadius: "10px",
-//       color: "white",
-//     },
-//     "&:hover fieldset": {
-//       borderColor: "transparent",
-//       color: "white",
-//     },
-//     "&.Mui-focused fieldset": {
-//       borderColor: "transparent",
-//       //   color: "white",
-//     },
-//   },
-// });
-
+const gradient = `radial-gradient(circle, rgba(184,185,22,0.5) 0%, rgba(184,172,35,0.23) 100%)`;
+const BootstrapButton = styled(Button)({
+  boxShadow: "none",
+  textTransform: "none",
+  fontSize: 16,
+  padding: "6px 12px",
+  border: "1px solid",
+  lineHeight: 1.5,
+  backgroundColor: "transparent",
+  borderColor: "#ffb400",
+  fontFamily: [
+    "-apple-system",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+  "&:hover": {
+    background: gradient,
+    // backgroundColor: "#ffb400",
+    borderColor: "#ffb400",
+    boxShadow: "none",
+    color: "black",
+  },
+  "&:active": {
+    boxShadow: "none",
+    backgroundColor: "transparent",
+    borderColor: "#ffb400",
+    color: "black",
+    // outline: "none",
+  },
+  "&:focus": {
+    // boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
+  },
+});
+const myStyle = {
+  border: "1px solid transparent",
+  backgroundColor: "rgb(34, 34, 34)",
+  color: "white",
+  // height: "50px",
+  borderRadius: "10px",
+  padding: "10px",
+};
 export default function ContactInput() {
-  const myStyle = {
-    border: "1px solid transparent",
-    backgroundColor: "rgb(34, 34, 34)",
-    color: "white",
-    // height: "50px",
-    borderRadius: "10px",
-    padding: "10px",
+  const { handleClick, handleClickF } = React.useContext(dataContext);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_il36wn6",
+        "template_4pjwtw2",
+        form.current,
+        "rVJJBkDG2xhnRnoIf"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+          handleClick();
+        },
+        (error) => {
+          console.log(error.text);
+          handleClickF();
+        }
+      );
   };
   return (
-    <div className={styles.fieldcontainer}>
+    <form className={styles.fieldcontainer} ref={form} onSubmit={sendEmail}>
       <input
         className={styles.input}
         type="text"
         placeholder="Name"
         style={myStyle}
+        name="name"
+        id="name"
+        required={"required"}
       />
       <input
         className={styles.input}
         type="Email"
         placeholder="Email"
         style={myStyle}
+        name="email"
+        id="email"
+        required={"required"}
       />
       <textarea
         className={styles.input}
@@ -57,148 +113,26 @@ export default function ContactInput() {
         placeholder="Message"
         style={myStyle}
         rows={"5"}
+        name="message"
+        id="message"
+        minLength={20}
+        required={"required"}
       />
-    </div>
-    // <Box
-    //   component="form"
-    //   sx={{
-    //     "& > :not(style)": { m: 1, width: "25ch" },
-    //   }}
-    //   noValidate
-    //   autoComplete="off"
-    // >
-    //   <CssTextField id="outlined-basic" label="Name" variant="outlined" />
-    //   <CssTextField id="outlined-basic" label="Email" variant="outlined" />
-    //   <CssTextField
-    //   color="warning"
-    //     id="outlined-multiline-flexible"
-    //     label="Message"
-    //     multiline
-    //     variant="outlined"
-    //     minRows={4}
-    //     defaultValue={"Type your mesage here"}
-    //     // style={{ color: "white" }}
-    //   />
-    // </Box>
+      <a className={styless.stackbutton} title="Send Message">
+        <BootstrapButton
+          type="submit"
+          className={styless.stackbutton}
+          style={{ borderRadius: "20px", color: "white" }}
+          size="large"
+          variant="outlined"
+          onSubmit={sendEmail}
+          // startIcon={<MdOutlineEventNote />}
+        >
+          <SendIcon sx={{ fonstSize: "50px", color: yellow[500] }} />
+        </BootstrapButton>
+      </a>
+      <AlertSnackBar />
+      <AlertSnackBarF />
+    </form>
   );
 }
-
-// import * as React from 'react';
-
-import InputBase from "@mui/material/InputBase";
-// import Box from '@mui/material/Box';
-import InputLabel from "@mui/material/InputLabel";
-// import TextField from '@mui/material/TextField';
-import FormControl from "@mui/material/FormControl";
-
-// const BootstrapInput = styled(InputBase)(({ theme }) => ({
-//   'label + &': {
-//     marginTop: theme.spacing(3),
-//   },
-//   '& .MuiInputBase-input': {
-//     borderRadius: 4,
-//     position: 'relative',
-//     backgroundColor: theme.palette.mode === 'light' ? '#fcfcfb' : '#2b2b2b',
-//     border: '1px solid #ced4da',
-//     fontSize: 16,
-//     width: 'auto',
-//     padding: '10px 12px',
-//     transition: theme.transitions.create([
-//       'border-color',
-//       'background-color',
-//       'box-shadow',
-//     ]),
-//     // Use the system font instead of the default Roboto font.
-//     fontFamily: [
-//       '-apple-system',
-//       'BlinkMacSystemFont',
-//       '"Segoe UI"',
-//       'Roboto',
-//       '"Helvetica Neue"',
-//       'Arial',
-//       'sans-serif',
-//       '"Apple Color Emoji"',
-//       '"Segoe UI Emoji"',
-//       '"Segoe UI Symbol"',
-//     ].join(','),
-//     '&:focus': {
-//       boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
-//       borderColor: theme.palette.primary.main,
-//     },
-//   },
-// }));
-
-// const RedditTextField = styled((props) => (
-//   <TextField InputProps={{ disableUnderline: true }} {...props} />
-// ))(({ theme }) => ({
-//   '& .MuiFilledInput-root': {
-//     border: '1px solid #e2e2e1',
-//     overflow: 'hidden',
-//     borderRadius: 4,
-//     backgroundColor: theme.palette.mode === 'light' ? '#fcfcfb' : '#2b2b2b',
-//     transition: theme.transitions.create([
-//       'border-color',
-//       'background-color',
-//       'box-shadow',
-//     ]),
-//     '&:hover': {
-//       backgroundColor: 'transparent',
-//     },
-//     '&.Mui-focused': {
-//       backgroundColor: 'transparent',
-//       boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
-//       borderColor: theme.palette.primary.main,
-//     },
-//   },
-// }));
-
-// const ValidationTextField = styled(TextField)({
-//   '& input:valid + fieldset': {
-//     borderColor: 'green',
-//     borderWidth: 2,
-//   },
-//   '& input:invalid + fieldset': {
-//     borderColor: 'red',
-//     borderWidth: 2,
-//   },
-//   '& input:valid:focus + fieldset': {
-//     borderLeftWidth: 6,
-//     padding: '4px !important', // override inline-style
-//   },
-// });
-
-// export default function CustomizedInputs() {
-//   return (
-//     <Box
-//       component="form"
-//       noValidate
-//       sx={{
-//         display: 'grid',
-//         gridTemplateColumns: { sm: '1fr 1fr' },
-//         gap: 2,
-//       }}
-//     >
-//       <FormControl variant="standard">
-//         <InputLabel shrink htmlFor="bootstrap-input">
-//           Bootstrap
-//         </InputLabel>
-//         <BootstrapInput defaultValue="react-bootstrap" id="bootstrap-input" />
-//       </FormControl>
-//       <RedditTextField
-//         label="Reddit"
-//         defaultValue="react-reddit"
-//         id="reddit-input"
-//         variant="filled"
-//         style={{ marginTop: 11 }}
-//       />
-//       <CssTextField label="Custom CSS" id="custom-css-outlined-input" />
-//       <ValidationTextField
-//         label="CSS validation style"
-//         required
-//         variant="outlined"
-//         defaultValue="Success"
-//         id="validation-outlined-input"
-//       />
-//     </Box>
-//   );
-// }

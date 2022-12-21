@@ -8,11 +8,10 @@ import ContactComponent from "../Components/ContactComponent";
 // import { contactData } from "../Components/Data";
 const contact = () => {
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <Meta id={3} />
       <PageHeader id={2} />
       <ContactComponent />
-      
     </div>
   );
 };

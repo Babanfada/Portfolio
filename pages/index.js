@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Meta id={0} />
-      {/* <Image src={hort} alt="draft" /> */}
       <Detailsme />
     </div>
   );

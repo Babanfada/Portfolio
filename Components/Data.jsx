@@ -13,10 +13,15 @@ import firebase from "../public/images/firebase.png";
 import git from "../public/images/git.png";
 import github from "../public/images/github.png";
 
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
+import hort from "../public/images/Ambrossia.png";
+import hort1 from "../public/images/emile.jpg";
+import hort2 from "../public/images/photo.jpg";
+import hort3 from "../public/images/emile.jpg";
 export const headData = [
   {
     title: "Tolani_Home",
@@ -141,21 +146,41 @@ export const skills = [
 
 export const contactData = [
   {
-    icon: <LocalPhoneIcon sx={{ fonstSize: "50", color: yellow[500] }} />,
+    icon: <WhatsAppIcon sx={{ fonstSize: "50", color: yellow[500] }} />,
     url: "+2347038626576",
     color: "#ffeb3b",
-    link: "/",
-  },
-  {
-    icon: <EmailIcon sx={{ fonstSize: "50px", color: green[500] }} />,
-    url: "ibn.ibrahim1992@gmail.com",
-    color: "#4caf50",
-    link: "/",
+    link: "https://api.whatsapp.com/send?phone=2347038626576&text=Hello,%20I%20am%20happy%20to%20speak%20with%20you.",
   },
   {
     icon: <LinkedInIcon sx={{ fonstSize: "50", color: blue[500] }} />,
-    url: "@babanfada",
+    url: "Muhammed Kabeer Ibrahim",
     color: "#2196f3",
-    link: "/",
+    link: "https://www.linkedin.com/in/muhammed-kabeer-ibrahim-97626a12b/",
+  },
+  {
+    icon: <TwitterIcon sx={{ fonstSize: "50px", color: green[500] }} />,
+    url: "@babanfada",
+    color: "#4caf50",
+    link: "https://twitter.com/babanfada",
+  },
+];
+
+// const pics = [hort, hort1, hort2, hort3];
+export const portfolioCardData = [
+  {
+    image: hort,
+    link: "",
+  },
+  {
+    image: hort1,
+    link: "",
+  },
+  {
+    image: hort2,
+    link: "",
+  },
+  {
+    image: hort3,
+    link: "",
   },
 ];
