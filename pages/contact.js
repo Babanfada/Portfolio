@@ -1,6 +1,6 @@
 import React from "react";
 import Meta from "../public/Meta";
-import PageHeader from "../Components/pageHeader";
+import PageHeader from "../Components/PageHeader";
 import ContactComponent from "../Components/ContactComponent";
 import { motion } from "framer-motion";
 
