@@ -1,6 +1,6 @@
 import React from "react";
 import Meta from "../public/Meta";
-import PageHeader from "../Components/pageHeader";
+import PageHeader from "../Components/PageHeader";
 import AboutmeDetails from "../Components/AboutmeDetails";
 import { motion } from "framer-motion";
 const about = () => {
