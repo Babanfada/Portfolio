@@ -54,7 +54,7 @@ export const icons = [
     icon: (
       <HomeIcon
         color="secondary"
-        sx={{ fonstSize: "50", color: yellow[500] }}
+        sx={{ fonstSize: "30", color: yellow[500] }}
       />
     ),
     name: "Home",
@@ -64,40 +64,40 @@ export const icons = [
 
   {
     icon: (
-      <PersonIcon color="success" sx={{ fonstSize: "50", color: blue[500] }} />
+      <PersonIcon color="success" sx={{ fonstSize: "30", color: blue[500] }} />
     ),
     name: "Stack",
     color: "#2196f3",
     link: "/stack",
   },
   {
-    icon: <BusinessCenterIcon sx={{ fonstSize: "50", color: purple[300] }} />,
+    icon: <BusinessCenterIcon sx={{ fonstSize: "30", color: purple[300] }} />,
     name: "Portfolio",
     color: "#9c27b0",
     link: "/portfolio",
   },
   {
-    icon: <ContactPhoneIcon sx={{ fonstSize: "50", color: green[500] }} />,
+    icon: <ContactPhoneIcon sx={{ fonstSize: "30", color: green[500] }} />,
     name: "Contact",
     style1: "0px",
     color: "#4caf50",
     link: "/contact",
   },
   {
-    icon: <LightModeIcon sx={{ fonstSize: "50", color: yellow[500] }} />,
+    icon: <LightModeIcon sx={{ fonstSize: "30", color: yellow[500] }} />,
     name: "Light",
   },
   {
-    icon: <DarkModeIcon sx={{ fonstSize: "50", color: blue[500] }} />,
+    icon: <DarkModeIcon sx={{ fonstSize: "30", color: blue[500] }} />,
     name: "Dark",
   },
   {
-    icon: <MenuIcon sx={{ fonstSize: "50", color: yellow[500] }} />,
+    icon: <MenuIcon sx={{ fonstSize: "30", color: yellow[500] }} />,
     name: "Menu",
     style1: "0px",
   },
   {
-    icon: <CloseIcon sx={{ fonstSize: "50", color: red[900] }} />,
+    icon: <CloseIcon sx={{ fonstSize: "30", color: red[900] }} />,
     name: "",
     style: "0px",
   },

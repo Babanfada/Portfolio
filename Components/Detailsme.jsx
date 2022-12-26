@@ -111,6 +111,7 @@ const Detailsme = () => {
               style={{
                 borderRadius: "20px",
                 color: "white",
+                color: "green",
                 fontFamily: `"Lobster", cursive`,
               }}
               size="large"
@@ -123,7 +124,11 @@ const Detailsme = () => {
           <Link className={styles.stackbutton} href={"/portfolio"}>
             <BootstrapButton
               className={styles.stackbutton}
-              style={{ borderRadius: "20px", color: "yellow" }}
+              style={{
+                borderRadius: "20px",
+                color: "yellow",
+                fontFamily: `"Lobster", cursive`,
+              }}
               variant="outlined"
               startIcon={<BusinessCenterIcon />}
             >
