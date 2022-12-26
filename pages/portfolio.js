@@ -24,7 +24,6 @@ const portfolio = ({ posts, pictures }) => {
       exit={{ opacity: 0 }}
       initial={{ opacity: 0, scale: 2 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 2 }}
     >
       <Meta id={2} />
       <PageHeader id={1} />
