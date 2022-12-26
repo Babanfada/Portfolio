@@ -78,9 +78,9 @@
     align-items: center;
     width: 250px;
     gap: 1vw;
+    font-family: "Lobster", cursive;
   }
   .stackbutton {
     width: 100%;
-    font-family: "Lobster", cursive;
   }
 }
