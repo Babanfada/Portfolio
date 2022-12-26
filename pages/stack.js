@@ -10,7 +10,7 @@ const about = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1 }}
-      style={{ border: "3px solid yellow", width: "100%", overflow: "hidden" }}
+      style={{ width: "100%", overflow: "hidden" }}
     >
       <Meta id={1} />
       <PageHeader id={0} />
