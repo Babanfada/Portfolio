@@ -21,7 +21,8 @@
   color: #ffb400;
   /* color: #b6a58a; */
   font-size: 40px;
-  font-family: "Rubik Spray Paint", cursive;
+  /* font-family: "Rubik Spray Paint", cursive; */
+  font-family: "Lobster", cursive;
 }
 .secondbox h1 span {
   color: #4732a8;
@@ -31,7 +32,8 @@
 }
 .secondbox h2 {
   color: #ffb400;
-  font-family: "Rubik Spray Paint", cursive;
+  /* font-family: "Rubik Spray Paint", cursive; */
+  font-family: "Lobster", cursive;
   font-size: 30px;
   font-weight: bold;
 }
@@ -46,6 +48,7 @@
 .stackbutton {
   width: 15vw;
   font-family: "Lobster", cursive;
+  text-decoration: none;
 }
 .stack {
   display: flex;

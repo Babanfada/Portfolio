@@ -9,7 +9,7 @@ import { MdOutlineEventNote } from "react-icons/md";
 import { styled } from "@mui/material/styles";
 import { yellow } from "@mui/material/colors";
 import Link from "next/link";
-// import CV from "../public/images/document.pdf";
+//  import CV from "../public/document.pdf";
 const gradient = `radial-gradient(circle, rgba(184,185,22,0.5) 0%, rgba(184,172,35,0.23) 100%)`;
 const BootstrapButton = styled(Button)({
   boxShadow: "none",
@@ -99,7 +99,13 @@ const Detailsme = () => {
         </p>
 
         <Stack className={styles.stack} direction="row" spacing={0}>
-          <a className={styles.stackbutton} title="Download CV">
+          <a
+            className={styles.stackbutton}
+            title="Download CV"
+            download="Curriculum Vitae"
+            href={"cv.docx"}
+            target={"blank"}
+          >
             <BootstrapButton
               className={styles.stackbutton}
               style={{ borderRadius: "20px", color: "white" }}

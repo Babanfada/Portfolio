@@ -1,17 +1,15 @@
 import "../styles/globals.css";
 import Layout from "../Components/Layout";
-
-const menu = [
-  {
-    icon: "",
-    name: "",
-  },
-];
-function MyApp({ Component, pageProps }) {
+import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
+function MyApp({ Component, pageProps}) {
+  const Router = useRouter();
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AnimatePresence mode="wait">
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AnimatePresence>
   );
 }
 

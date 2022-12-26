@@ -5,7 +5,7 @@ import Navigations from "./Navigations";
 export const dataContext = createContext("");
 import useLocalStorage from "./LocalStorage";
 import ActiveLink from "./ActiveLink";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Footer from "./Footer";
 import styles from "../styles/footer.module.css";
 import { icons } from "./Data";
@@ -93,7 +93,7 @@ const Layout = ({ children }) => {
             position: "relative",
             //  border: "1px solid yellow", //check
             minHeight: "100vh",
-            width:"100vw",
+            width: "100vw",
             // overflow: "hidden",
             zIndex: "0",
             backgroundColor: `${isdarkmode ? "black" : "transparent"}`,

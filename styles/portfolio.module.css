@@ -7,11 +7,25 @@
 .image {
   /* border: 1px solid red; */
   width: 100%;
+  /* object-fit: cover; */
+
 }
 .typo {
   font-family: "Rubik Storm", cursive;
   color: rgb(195, 238, 195);
+  word-wrap:break-word;
+ 
 }
+.typo1 {
+  font-family: "Rubik Storm", cursive;
+  color: rgb(195, 238, 195);
+  /* border: 1px solid red; */
+  /* word-wrap:break-word; */
+ 
+}
+/* .typo div:first-child{
+
+} */
 @media (max-width: 950px) {
   .wrapper {
     width: 80vw;

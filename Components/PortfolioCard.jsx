@@ -14,6 +14,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import styles from "../styles/portfolio.module.css";
 import { green, yellow, red, grey, purple, blue } from "@mui/material/colors";
 import { portfolioCardData } from "./Data";
+
 export default function PortfolioCard({ post, pictures, index }) {
   return (
     <Card
@@ -24,32 +25,30 @@ export default function PortfolioCard({ post, pictures, index }) {
         borderRadius: "10px",
       }}
     >
-      <image
-        src={portfolioCardData[index].image}
-        // src={"https://picsum.photos/200/300?grayscale"}
-        alt="portfolio"
+      <Image
+        src={pictures[index].url}
+        alt="portfolio Image"
         height="140"
-        // width={pictures[index].width}
         width={"140"}
         className={styles.image}
       />
       <CardContent>
-        <Typography
-          className={styles.typo}
-          gutterBottom
-          variant="h5"
-          component="div"
-        >
+        <div className={styles.typo1} gutterBottom variant="h5" component="div">
           {post.name}
-        </Typography>
-        <Typography className={styles.typo} variant="body2" color="white">
+        </div>
+        <div className={styles.typo} variant="body2" color="white">
           <div>{post.full_name}</div>
           <div>{post.created_at}</div>
-        </Typography>
+        </div>
       </CardContent>
       <CardActions>
         <Button size="small">
-          <a href={post.html_url} target={"blank"} rel="noreferrer" title="Web">
+          <a
+            href={portfolioCardData[index]}
+            target={"blank"}
+            rel="noreferrer"
+            title="Web"
+          >
             <LanguageIcon sx={{ fonstSize: "50", color: green[500] }} />
           </a>
         </Button>

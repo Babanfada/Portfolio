@@ -18,10 +18,10 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-import hort from "../public/images/Ambrossia.png";
-import hort1 from "../public/images/emile.jpg";
-import hort2 from "../public/images/photo.jpg";
-import hort3 from "../public/images/emile.jpg";
+import hort from "../public/images/image20.jpg";
+import hort1 from "../public/images/bee2.jpg";
+import hort2 from "../public/images/bee4.jpg";
+import hort3 from "../public/images/bee3.jpg";
 export const headData = [
   {
     title: "Tolani_Home",
@@ -125,22 +125,27 @@ export const skills = [
   {
     image: react,
     name: "React",
+    url: "https://reactjs.org/",
   },
   {
     image: next,
     name: "Next",
+    url: "https://nextjs.org/",
   },
   {
     image: firebase,
     name: "Firebase",
+    url: "https://firebase.google.com/",
   },
   {
     image: git,
     name: "Git",
+    url: "https://git-scm.com/",
   },
   {
     image: github,
     name: "Github",
+    url: "https://github.com/",
   },
 ];
 
@@ -165,22 +170,9 @@ export const contactData = [
   },
 ];
 
-// const pics = [hort, hort1, hort2, hort3];
 export const portfolioCardData = [
-  {
-    image: hort,
-    link: "",
-  },
-  {
-    image: hort1,
-    link: "",
-  },
-  {
-    image: hort2,
-    link: "",
-  },
-  {
-    image: hort3,
-    link: "",
-  },
+  "https://twitter.com/babanfada",
+  "https://www.linkedin.com/in/muhammed-kabeer-ibrahim-97626a12b/",
+  "https://api.whatsapp.com/send?phone=2347038626576&text=Hello,%20I%20am%20happy%20to%20speak%20with%20you.",
+  "www.google.com"
 ];

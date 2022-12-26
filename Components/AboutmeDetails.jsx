@@ -13,7 +13,11 @@ const AboutmeDetails = () => {
 
       <div className={styles.second}>
         {skills.map((skill, index) => {
-          return <Skills key={index} skill={skill} />;
+          return (
+            <a key={index} href={skill.url} target={"blank"}>
+              <Skills skill={skill} />
+            </a>
+          );
         })}
       </div>
     </div>
