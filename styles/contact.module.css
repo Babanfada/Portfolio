@@ -67,6 +67,7 @@
     width: 80vw;
     margin: 5vh 10vw;
     gap: 10px;
+    border: 1px solid blue;
   }
   .item {
     width: 100%;
