@@ -31,8 +31,8 @@ body {
   font-family: "Roboto Slab", serif;
   color: white;
   /* background-color: black; */
-  background-image: url("../public/images/fullscreendark.jpg");
-  /* background-image: url("/images/fullscreendark.jpg"); */
+  /* background-image: url("../public/images/fullscreendark.jpg"); */
+  background-image: url("/fullscreendark.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: auto;
