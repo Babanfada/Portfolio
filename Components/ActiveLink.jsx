@@ -8,7 +8,7 @@ function ActiveLink({ children, href }) {
     color: router.asPath === href ? "pink" : "white",
     backgroundColor:
       router.asPath === href ? "rgba(255, 255, 255, 0.309)" : "transparent",
-    borderRadius: "50%",
+    // borderRadius: "50%",
   };
 
   const handleClick = (e) => {

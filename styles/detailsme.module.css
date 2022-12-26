@@ -49,6 +49,7 @@
   width: 15vw;
   font-family: "Lobster", cursive;
   text-decoration: none;
+  font: bolder;
 }
 .stack {
   display: flex;
