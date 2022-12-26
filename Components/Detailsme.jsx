@@ -108,7 +108,11 @@ const Detailsme = () => {
           >
             <BootstrapButton
               className={styles.stackbutton}
-              style={{ borderRadius: "20px", color: "white" }}
+              style={{
+                borderRadius: "20px",
+                color: "white",
+                fontFamily: `"Lobster", cursive`,
+              }}
               size="large"
               variant="outlined"
               startIcon={<MdOutlineEventNote />}
