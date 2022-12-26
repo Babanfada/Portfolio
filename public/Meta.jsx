@@ -5,7 +5,7 @@ const Meta = ({id}) => {
     <Head>
       <title>{headData[id].title}</title>
       <meta name={headData[id].name} content={headData[id].content} />
-      <link rel="icon" href={headData[id].href} />
+      {/* <link rel="icon" href={headData[id].href} /> */}
     </Head>
   );
 };
