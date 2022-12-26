@@ -96,7 +96,7 @@ const Layout = ({ children }) => {
             width: "100vw",
             // overflow: "hidden",
             zIndex: "0",
-            backgroundColor: `${isdarkmode ? "black" : "transparent"}`,
+            backgroundColor: `${isdarkmode ? "black" : "black"}`,
           }}
           className={styles.height}
         >
