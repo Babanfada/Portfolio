@@ -50,6 +50,7 @@
   font-family: "Lobster", cursive;
   text-decoration: none;
   font: bolder;
+  /* color: red; */
 }
 .stack {
   display: flex;
@@ -80,5 +81,6 @@
   }
   .stackbutton {
     width: 100%;
+    font-family: "Lobster", cursive;
   }
 }

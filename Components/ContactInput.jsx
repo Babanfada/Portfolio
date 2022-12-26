@@ -115,7 +115,7 @@ export default function ContactInput() {
         rows={"5"}
         name="message"
         id="message"
-        minLength={20}
+        minLength={10}
         required={"required"}
       />
       <a className={styless.stackbutton} title="Send Message">

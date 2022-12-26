@@ -119,7 +119,7 @@ const Detailsme = () => {
           <Link className={styles.stackbutton} href={"/portfolio"}>
             <BootstrapButton
               className={styles.stackbutton}
-              style={{ borderRadius: "20px", color: "white" }}
+              style={{ borderRadius: "20px", color: "yellow" }}
               variant="outlined"
               startIcon={<BusinessCenterIcon />}
             >
