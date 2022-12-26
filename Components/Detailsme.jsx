@@ -98,7 +98,7 @@ const Detailsme = () => {
           efficiently.
         </p>
 
-        <Stack className={styles.stack} direction="row" spacing={0}>
+        <div className={styles.stack} direction="row" spacing={0}>
           <a
             className={styles.stackbutton}
             title="Download CV"
@@ -126,7 +126,7 @@ const Detailsme = () => {
               Portfolio
             </BootstrapButton>
           </Link>
-        </Stack>
+        </div>
       </div>
     </div>
   );
