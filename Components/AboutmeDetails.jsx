@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profile from "../public/images/fullscreendark.jpg";
+import profile from "../public/images/fullscreendark2.jpg";
 import Skills from "./Skills";
 import { skills } from "./Data";
 import styles from "../styles/aboutmedetails.module.css";

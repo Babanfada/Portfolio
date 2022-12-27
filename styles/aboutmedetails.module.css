@@ -12,11 +12,13 @@
   border-radius: 20px;
   height: 45vh;
   width: 100%;
+ 
   object-fit: cover;
 }
-.first{
-    width: 100%;
-    /* border: 1px solid green; */
+.first {
+  /* width: 100%; */
+   width: 30vw;
+  /* border: 1px solid green; */
 }
 .second {
   display: grid;
@@ -27,15 +29,46 @@
   /* border: 1px solid white; */
 }
 @media (max-width: 950px) {
-    .image{
-        width: 100%;
-    }
+  .image {
+    /* width: 100%; */
+    min-width: 30vw;
+  }
   .wrapper {
     flex-direction: column;
   }
-  .second{
+  .second {
     gap: 1vw;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 15vh;
   }
+  .first {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+}
+
+@media (min-width: 550px) and (max-width: 988px) {
+  /* CSS rules go here */
+  .image {
+    /* width: 100%; */
+    min-width: 30vw;
+    object-fit: cover;
+  }
+  .first {
+  width: 33vw;
+  /* border: 1px solid pink; */
+}
+}
+@media (min-width: 390px) and (max-width: 546px) {
+  
+  .image {
+    /* width: 100%;  */
+    min-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .first {
+  width: 80vw;
+  /* border: 1px solid pink; */
+}
 }
