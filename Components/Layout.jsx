@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Footer from "./Footer";
 import styles from "../styles/footer.module.css";
 import { icons } from "./Data";
+// import profile from "/fullscreendark.jpg";
 // import video from "../public/images/video.mp4"
 
 const Layout = ({ children }) => {
@@ -96,7 +97,7 @@ const Layout = ({ children }) => {
             width: "100vw",
             // overflow: "hidden",
             zIndex: "0",
-            backgroundColor: `${isdarkmode ? "black" : "transparent"}`,
+            background: `${isdarkmode ? "black" : "transparent"}`,
           }}
           className={styles.height}
         >

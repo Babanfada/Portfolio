@@ -9,7 +9,7 @@
   background-color: "#222222"; */
 }
 
-.main {
+/* .main {
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -26,7 +26,7 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-  /* color: hsl(0, 0%, 92%); */
+  /* color: hsl(0, 0%, 92%); 
 }
 
 .footer a {
@@ -134,4 +134,4 @@
   .logo img {
     filter: invert(1);
   }
-}
+} */

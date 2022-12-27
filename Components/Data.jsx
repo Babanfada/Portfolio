@@ -152,7 +152,7 @@ export const skills = [
 export const contactData = [
   {
     icon: <WhatsAppIcon sx={{ fonstSize: "50", color: yellow[500] }} />,
-    url: "+2347038626576",
+    url: "+234703.....",
     color: "#ffeb3b",
     link: "https://api.whatsapp.com/send?phone=2347038626576&text=Hello,%20I%20am%20happy%20to%20speak%20with%20you.",
   },
@@ -174,5 +174,5 @@ export const portfolioCardData = [
   "https://twitter.com/babanfada",
   "https://www.linkedin.com/in/muhammed-kabeer-ibrahim-97626a12b/",
   "https://api.whatsapp.com/send?phone=2347038626576&text=Hello,%20I%20am%20happy%20to%20speak%20with%20you.",
-  "www.google.com"
+  "www.google.com",
 ];
