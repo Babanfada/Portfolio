@@ -8,7 +8,13 @@ const AboutmeDetails = () => {
   return (
     <div className={styles.wrapper}>
       <motion.div whileHover={{ scale: 0.95 }} className={styles.first}>
-        <Image className={styles.image} src={profile} alt={"draft"} />
+        <Image
+          className={styles.image}
+          src={profile}
+          alt={"draft"}
+          // width={"30"}
+          // height={"30"}
+        />
       </motion.div>
 
       <div className={styles.second}>
