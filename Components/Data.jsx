@@ -172,7 +172,6 @@ export const contactData = [
 
 export const portfolioCardData = [
   "https://apiaries-16.vercel.app/",
-  "https://www.linkedin.com/in/muhammed-kabeer-ibrahim-97626a12b/",
   "https://portfolio-nine-nu-96.vercel.app/",
   "https://react-applications-seven.vercel.app/",
   "www.google.com",
