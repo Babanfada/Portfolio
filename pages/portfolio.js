@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import Meta from "../public/Meta";
 import PageHeader from "../Components/PageHeader";
 import PortfolioCard from "../Components/PortfolioCard";
