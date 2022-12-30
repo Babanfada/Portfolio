@@ -171,8 +171,9 @@ export const contactData = [
 ];
 
 export const portfolioCardData = [
-  "https://twitter.com/babanfada",
+  "https://apiaries-16.vercel.app/",
   "https://www.linkedin.com/in/muhammed-kabeer-ibrahim-97626a12b/",
-  "https://api.whatsapp.com/send?phone=2347038626576&text=Hello,%20I%20am%20happy%20to%20speak%20with%20you.",
+  "https://portfolio-nine-nu-96.vercel.app/",
+  "https://react-applications-seven.vercel.app/",
   "www.google.com",
 ];
