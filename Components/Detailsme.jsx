@@ -103,7 +103,7 @@ const Detailsme = () => {
             className={styles.stackbutton}
             title="Download CV"
             download="Curriculum Vitae"
-            href={"myportfolio1.pdf"}
+            href={"myportfolio.pdf"}
             target={"blank"}
           >
             <BootstrapButton
@@ -142,4 +142,3 @@ const Detailsme = () => {
 };
 
 export default Detailsme;
-
