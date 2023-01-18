@@ -172,6 +172,7 @@ export const contactData = [
 
 export const portfolioCardData = [
   "https://apiaries-16.vercel.app/",
+  "https://home-rentals-lgqn.vercel.app/",
   "https://ibrahim-muhammed-lendsqr-fe-test.vercel.app/users",
   "https://portfolio-nine-nu-96.vercel.app/",
   "https://react-applications-seven.vercel.app/",
