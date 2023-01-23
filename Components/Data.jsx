@@ -12,6 +12,8 @@ import next from "../public/images/next.png";
 import firebase from "../public/images/firebase.png";
 import git from "../public/images/git.png";
 import github from "../public/images/github.png";
+import sass from "../public/images/sass.svg";
+import Typescript from "../public/images/Typescript.png";
 
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -126,6 +128,16 @@ export const skills = [
     image: react,
     name: "React",
     url: "https://reactjs.org/",
+  },
+  {
+    image: sass,
+    name: "Sass",
+    url: "https://sass-lang.com/",
+  },
+  {
+    image: Typescript,
+    name: "Typescript",
+    url: "https://www.typescriptlang.org/",
   },
   {
     image: next,
