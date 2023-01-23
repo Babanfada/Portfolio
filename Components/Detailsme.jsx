@@ -76,6 +76,10 @@ const Detailsme = () => {
               3000,
               "Experienced in",
               3000, // this delay will be applied before the next string is displayed
+              "JAVASCRIPT/TYPESCRIPT",
+              3000,
+              "SASS/SCSS",
+              3000,
               "REACT.JS",
               3000,
               "NEXT.JS",
