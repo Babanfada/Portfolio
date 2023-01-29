@@ -106,8 +106,9 @@ const Detailsme = () => {
           <a
             className={styles.stackbutton}
             title="Download CV"
-            download="Curriculum Vitae"
-            href={"myportfolio.pdf"}
+            // download="Curriculum Vitae"
+            // href={"myportfolio.pdf"}
+            href={"https://rxresu.me/apiariessixteen/muhammed-kabeer-ibrahim"}
             target={"blank"}
           >
             <BootstrapButton
