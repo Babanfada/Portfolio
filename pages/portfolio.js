@@ -58,7 +58,7 @@ const portfolio = ({ posts, pictures }) => {
       >
         {posts.map((post, index) => {
           return (
-            <SwiperSlide key={index}>
+            <SwiperSlide className={styles.swiperslide} key={index}>
               <PortfolioCard post={post} pictures={pictures} index={index} />
             </SwiperSlide>
           );

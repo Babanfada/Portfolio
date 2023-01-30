@@ -1,27 +1,34 @@
 .wrapper {
   /* border: 1px solid red; */
   width: 60vw;
+  height:54vh;
   margin: 10vh 20vw;
   /* padding: 50vh; */
+}
+.swiperslide{
+  /* border: 1px solid red;
+  height: fit-content;  */
+  background: transparent;
+  display: grid;
+  place-items: center;
 }
 .image {
   /* border: 1px solid red; */
   width: 100%;
+  height: 50%;
+  /* width: 140; */
   /* object-fit: cover; */
-
 }
 .typo {
   font-family: "Rubik Storm", cursive;
   color: rgb(195, 238, 195);
-  word-wrap:break-word;
- 
+  word-wrap: break-word;
 }
 .typo1 {
   font-family: "Rubik Storm", cursive;
   color: rgb(195, 238, 195);
   /* border: 1px solid red; */
   /* word-wrap:break-word; */
- 
 }
 /* .typo div:first-child{
 

@@ -20,10 +20,13 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-import hort from "../public/images/image20.jpg";
-import hort1 from "../public/images/bee2.jpg";
-import hort2 from "../public/images/bee4.jpg";
-import hort3 from "../public/images/bee3.jpg";
+import apiaries from "../public/images/Apiaries16.png";
+import homerentals from "../public/images/homerentals.png";
+import lendsqr from "../public/images/lendsqr.png";
+import portfolio from "../public/images/portfolio.png";
+import noteapp from "../public/images/noteapp.png";
+import twitter from "../public/images/twitterclone.png";
+
 export const headData = [
   {
     title: "Tolani_Home",
@@ -183,10 +186,28 @@ export const contactData = [
 ];
 
 export const portfolioCardData = [
-  "https://apiaries-16.vercel.app/",
-  "https://home-rentals-lgqn.vercel.app/",
-  "https://ibrahim-muhammed-lendsqr-fe-test.vercel.app/users",
-  "https://portfolio-nine-nu-96.vercel.app/",
-  "https://react-applications-seven.vercel.app/",
-  "https://twiiter-clone-te3u.vercel.app/",
+  {
+    link: "https://apiaries-16.vercel.app/",
+    img: apiaries,
+  },
+  {
+    link: "https://home-rentals-lgqn.vercel.app/",
+    img: homerentals,
+  },
+  {
+    link: "https://ibrahim-muhammed-lendsqr-fe-test.vercel.app/users",
+    img: lendsqr,
+  },
+  {
+    link: "https://portfolio-nine-nu-96.vercel.app/",
+    img: portfolio,
+  },
+  {
+    link: "https://react-applications-seven.vercel.app/",
+    img: noteapp,
+  },
+  {
+    link: "https://twiiter-clone-te3u.vercel.app/",
+    img: twitter,
+  },
 ];

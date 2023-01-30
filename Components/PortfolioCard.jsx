@@ -23,13 +23,12 @@ export default function PortfolioCard({ post, pictures, index }) {
         backgroundColor: "rgb(34, 34, 34)",
         color: "white",
         borderRadius: "10px",
+        maxHeight: "fit-content",
       }}
     >
       <Image
-        src={pictures[index].url}
+        src={portfolioCardData[index].img}
         alt="portfolio Image"
-        height="140"
-        width={"140"}
         className={styles.image}
       />
       <CardContent>
@@ -44,7 +43,7 @@ export default function PortfolioCard({ post, pictures, index }) {
       <CardActions>
         <Button size="small">
           <a
-            href={portfolioCardData[index]}
+            href={portfolioCardData[index].link}
             target={"blank"}
             rel="noreferrer"
             title="Web"
