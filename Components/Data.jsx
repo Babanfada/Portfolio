@@ -26,6 +26,7 @@ import lendsqr from "../public/images/lendsqr.png";
 import portfolio from "../public/images/portfolio.png";
 import noteapp from "../public/images/noteapp.png";
 import twitter from "../public/images/twitterclone.png";
+import sampleproject from "../public/images/sampleproject.png";
 
 export const headData = [
   {
@@ -209,5 +210,9 @@ export const portfolioCardData = [
   {
     link: "https://twiiter-clone-te3u.vercel.app/",
     img: twitter,
+  },
+  {
+    link: "https://sample-project-babanfada.vercel.app/",
+    img:sampleproject,
   },
 ];
