@@ -208,11 +208,11 @@ export const portfolioCardData = [
     img: noteapp,
   },
   {
-    link: "https://twiiter-clone-te3u.vercel.app/",
-    img: twitter,
-  },
-  {
     link: "https://sample-project-babanfada.vercel.app/",
     img:sampleproject,
+  },
+  {
+    link: "https://twiiter-clone-te3u.vercel.app/",
+    img: twitter,
   },
 ];
