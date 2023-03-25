@@ -75,7 +75,7 @@ export async function getServerSideProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
 
-  const res = await fetch("https://api.github.com/users/Babanfada /repos");
+  const res = await fetch("https://api.github.com/users/Babanfada/repos");
   const resp = await fetch(
     "https://api.thecatapi.com/v1/images/search?limit=10"
   );
