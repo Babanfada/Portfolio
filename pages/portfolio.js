@@ -72,22 +72,25 @@ const portfolio = ({ posts, pictures }) => {
 export default portfolio;
 
 export async function getServerSideProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
+  try {
+    // Call an external API endpoint to get posts.
+    // You can use any data fetching library
+    const res = await fetch("https://api.github.com/users/BABANFADA/repos");
+    const resp = await fetch(
+      "https://api.thecatapi.com/v1/images/search?limit=10"
+    );
+    const posts = await res.json();
+    const pictures = await resp.json();
 
-  const res = await fetch("https://api.github.com/users/BABANFADA/repos");
-  const resp = await fetch(
-    "https://api.thecatapi.com/v1/images/search?limit=10"
-  );
-  const posts = await res.json();
-  const pictures = await resp.json();
-
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      posts,
-      pictures,
-    },
-  };
+    // By returning { props: { posts } }, the Blog component
+    // will receive `posts` as a prop at build time
+    return {
+      props: {
+        posts,
+        pictures,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+  }
 }
