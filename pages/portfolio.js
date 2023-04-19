@@ -5,7 +5,6 @@ import PortfolioCard from "../Components/PortfolioCard";
 import { motion } from "framer-motion";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";

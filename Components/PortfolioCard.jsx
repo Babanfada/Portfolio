@@ -16,6 +16,8 @@ import { green, yellow, red, grey, purple, blue } from "@mui/material/colors";
 import { portfolioCardData } from "./Data";
 
 export default function PortfolioCard({ post, pictures, index }) {
+  // const { img, link } = portfolioCardData;
+  console.log(portfolioCardData);
   return (
     <Card
       sx={{

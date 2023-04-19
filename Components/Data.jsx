@@ -27,6 +27,9 @@ import portfolio from "../public/images/portfolio.png";
 import noteapp from "../public/images/noteapp.png";
 import twitter from "../public/images/twitterclone.png";
 import sampleproject from "../public/images/sampleproject.png";
+import jobster from "../public/images/jobster.png";
+import jobio from "../public/images/jobio.png";
+import jobapi from "../public/images/jobapi.png";
 
 export const headData = [
   {
@@ -196,6 +199,18 @@ export const portfolioCardData = [
     img: homerentals,
   },
   {
+    link: "https://jobs-clientside.vercel.app/",
+    img: jobio,
+  },
+  {
+    link: "https://jobs-api-users-info-api.vercel.app",
+    img: jobapi,
+  },
+  {
+    link: "https://jobs-upgraded.vercel.app/",
+    img: jobster,
+  },
+  {
     link: "https://ibrahim-muhammed-lendsqr-fe-test.vercel.app/users",
     img: lendsqr,
   },
@@ -209,7 +224,7 @@ export const portfolioCardData = [
   },
   {
     link: "https://sample-project-babanfada.vercel.app/",
-    img:sampleproject,
+    img: sampleproject,
   },
   {
     link: "https://twiiter-clone-te3u.vercel.app/",
