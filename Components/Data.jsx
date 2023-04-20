@@ -31,7 +31,7 @@ import jobster from "../public/images/jobster.png";
 import jobio from "../public/images/jobio.png";
 import jobapi from "../public/images/jobapi.png";
 import redux from "../public/images/redux.png";
-import node from "../public/images/node.png";
+import node from "../public/images/Node.png";
 import express from "../public/images/express.jpg";
 import mongodb from "../public/images/mongodb.jpg";
 
