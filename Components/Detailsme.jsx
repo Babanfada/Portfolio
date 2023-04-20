@@ -72,34 +72,49 @@ const Detailsme = () => {
             loop={Infinity}
             wrapper="p"
             steps={[
-              "I'm a Web developer",
+              "I'm a Full Stack Web developer (MERN)",
               3000,
               "Experienced in",
               3000, // this delay will be applied before the next string is displayed
-              "JAVASCRIPT/TYPESCRIPT",
+              "mongoDB",
+              3000, // this delay will be applied before the next string is displayed
+              "Express",
+              3000, // this delay will be applied before the next string is displayed
+              "Node",
+              3000, // this delay will be applied before the next string is displayed
+              "Javascript/Typescript",
               3000,
-              "SASS/SCSS",
+              "Redux",
               3000,
-              "REACT.JS",
+              "scss",
               3000,
-              "NEXT.JS",
+              "React",
               3000,
-              "FIREBASE",
+              "Next",
               3000,
-              "GIT",
+              "Firebase",
               3000,
-              "GITHUB",
+              "Git",
+              3000,
+              "Github",
               3000,
             ]}
           />
         </h2>
 
         <p>
-          I am a front-end web developer with expertise in <span> ReactJS</span>
+          {/* I am a front-end web developer with expertise in <span> ReactJS</span>
           , <span> NextJS</span> and <span> Firebase</span>. I am skilled in
           responsive design and have a passion for creating user-friendly web
           applications. I use Git for version control to manage my projects
-          efficiently.
+          efficiently. */}
+          I am an experienced full-stack web developer with expertise in
+          <span> mongoDB</span>, <span> ExpressJS</span>, <span> ReactJS</span>,
+          and <span> NodeJS</span> (MERN stack). Additionally, I have experience
+          working with technologies such as Git, Redux, Firebase, TypeScript,
+          and more. I am skilled in creating responsive designs and developing
+          user friendly web applications. Using my proficiency in version
+          control with Git, I manage my projects efficiently.
         </p>
 
         <div className={styles.stack} direction="row" spacing={0}>
