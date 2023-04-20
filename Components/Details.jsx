@@ -58,7 +58,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
     backgroundColor: yellow[700],
   },
 }));
-const Detailsme = () => {
+const Mydetails = () => {
   return (
     <div className={styles.wrapperbox}>
       <div className={styles.firstbox}></div>
@@ -75,11 +75,11 @@ const Detailsme = () => {
               "I'm a Full Stack Web developer (MERN)",
               3000,
               "Experienced in",
-              3000, // this delay will be applied before the next string is displayed
+              3000,
               "mongoDB",
-              3000, // this delay will be applied before the next string is displayed
+              3000,
               "Express",
-              3000, // this delay will be applied before the next string is displayed
+              3000,
               "Node",
               3000, // this delay will be applied before the next string is displayed
               "Javascript/Typescript",
@@ -161,4 +161,4 @@ const Detailsme = () => {
   );
 };
 
-export default Detailsme;
+export default Mydetails;

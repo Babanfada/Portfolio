@@ -30,6 +30,10 @@ import sampleproject from "../public/images/sampleproject.png";
 import jobster from "../public/images/jobster.png";
 import jobio from "../public/images/jobio.png";
 import jobapi from "../public/images/jobapi.png";
+import redux from "../public/images/redux.png";
+import node from "../public/images/node.png";
+import express from "../public/images/express.jpg";
+import mongodb from "../public/images/mongodb.jpg";
 
 export const headData = [
   {
@@ -135,6 +139,26 @@ export const skills = [
     image: react,
     name: "React",
     url: "https://reactjs.org/",
+  },
+  {
+    image: redux,
+    name: "Redux",
+    url: "https://redux.js.org/",
+  },
+  {
+    image: express,
+    name: "Express",
+    url: "https://expressjs.com/",
+  },
+  {
+    image: mongodb,
+    name: "MongoDB",
+    url: "https://www.mongodb.com/",
+  },
+  {
+    image: node,
+    name: "Node",
+    url: "https://nodejs.org/",
   },
   {
     image: sass,

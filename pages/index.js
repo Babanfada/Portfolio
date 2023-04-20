@@ -3,7 +3,7 @@ import Image from "next/image";
 import Meta from "../public/Meta";
 import styles from "../styles/Home.module.css";
 // import hort from "../public/images/fullscreendark.jpg";
-import Detailsme from "../Components/Detailsme";
+import Mydetails from "../Components/Details";
 import { motion } from "framer-motion";
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       className={styles.container}
     >
       <Meta id={0} />
-      <Detailsme />
+      <Mydetails />
     </motion.div>
   );
 }
